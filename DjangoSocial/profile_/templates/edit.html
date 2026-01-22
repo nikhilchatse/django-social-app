@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="{% static 'css/dark-theme.css' %}" rel="stylesheet">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center">Edit Profile</h1>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" value="{{edit.name}}" name="name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">email</label>
+                        <input type="text" value="{{edit.email}}" name="email" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">contact</label>
+                        <input type="text" value="{{edit.contact}}" name="contact" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">bio</label>
+                        <input type="text" value="{{edit.bio}}" name="bio" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Profile Image</label>
+                        <input type="file" name="image" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

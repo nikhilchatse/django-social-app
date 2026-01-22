@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="{% static 'css/dark-theme.css' %}?v=1" rel="stylesheet">
+    <title>Posts</title>
+</head>
+<body>
+    {% include "nav.html" %}
+    <div class="py-5">
+        <div class="container">
+            <h1 class="text-center text-primary mb-4">Posts</h1>
+            <div class="row row-cols-1 justify-content-center g-4">
+                {% for i in post %}
+                <div class="col-7">
+                    <div class="card shadow-sm border-0">
+                        <img src="{{i.image.url}}" class="card-img-top  rounded-top" alt="..." style="height: 300px;aspect-ratio: 1; object-fit:cover;">
+                        <div class="card-body bg-white">
+                            <h5 class="card-title text-info">{{i.user.username}}</h5>
+                            <p class="card-text">{{i.captions}}</p>
+                            <p class="card-text text-muted small">Created At: {{i.created_at}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    {% comment %} <h1>home</h1> {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
