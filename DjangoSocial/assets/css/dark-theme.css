@@ -1,0 +1,175 @@
+/* Colorful Dark Theme Styles */
+
+/* Body gradient background */
+body {
+    background: linear-gradient(135deg, #170b72 0%, #16213e 50%, #0f3460 100%);
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Override any white backgrounds */
+* {
+    box-sizing: border-box;
+}
+
+.bg-light, .bg-white {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
+}
+
+.card-body.bg-white {
+    background: transparent !important;
+}
+
+/* Navbar styling */
+.navbar {
+    background: linear-gradient(90deg, #00008B 0%, #0000CD 100%) !important;
+    border-bottom: 2px solid #ff6b6b;
+}
+
+.navbar-brand {
+    color: #ffd93d !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #ffffff !important;
+}
+
+.nav-link:hover {
+    color: #ffd93d !important;
+}
+
+/* Button styles */
+.btn-primary {
+    background: linear-gradient(45deg, #ff6b6b, #ffa500);
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #ffa500, #ff6b6b);
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+    border: none;
+    color: white;
+}
+
+.btn-success:hover {
+    background: linear-gradient(45deg, #44a08d, #4ecdc4);
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #ff4757, #ff3838);
+    border: none;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(45deg, #ff3838, #ff4757);
+    transform: scale(1.05);
+}
+
+.btn-outline-success {
+    border-color: #4ecdc4;
+    color: #4ecdc4;
+}
+
+.btn-outline-success:hover {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+    border-color: #4ecdc4;
+    color: white;
+}
+
+/* Card styles */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    background: transparent !important;
+}
+
+/* Form controls */
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #e0e0e0;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #667eea;
+    color: #e0e0e0;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Alert styles */
+.alert-success {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+    border: none;
+    color: white;
+}
+
+/* Text colors */
+.text-primary {
+    color: #667eea !important;
+}
+
+.text-info {
+    color: #4ecdc4 !important;
+}
+
+.text-muted {
+    color: #b0b0b0 !important;
+}
+
+/* Container styling */
+.container {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* List group */
+.list-group-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #e0e0e0;
+}
+
+/* Override Bootstrap defaults for dark theme */
+.bg-body-tertiary {
+    background: linear-gradient(90deg, #00008B 0%, #0000CD 100%) !important;
+}
+
+/* Ensure all text is visible */
+h1, h2, h3, h4, h5, h6, p, label {
+    color: #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+}
+/* name space R.
+full stack develop - python develop 
+cravita - bold 
+present - persuing - final year */
