@@ -1,1 +1,2 @@
-web: gunicorn projectname.wsgi
+web: gunicorn DjangoSocial.wsgi --bind 0.0.0.0:$PORT
+
