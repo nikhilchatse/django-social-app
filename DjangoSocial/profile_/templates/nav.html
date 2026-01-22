@@ -22,7 +22,10 @@
       <ul class="navbar-nav">
         {% if user.is_authenticated %}
         <li class="nav-item">
-          <a class="btn btn-danger" href="/logout">Logout</a>
+          <a class="btn btn-danger m-1" href="/logout">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary m-1" href="/resetpass">Reset Password</a>
         </li>
         {% else %}
         <li class="nav-item">

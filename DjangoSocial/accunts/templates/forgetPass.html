@@ -10,17 +10,9 @@
 </head>
 <body>
     {% include "nav.html" %}
-        <div class="msg-container col-4 ">
-            {% for msg in messages %}
-            {% if msg %}
-                <div class="alert alert-success" role="alert">
-                            {{msg}}
-                </div>
-            {% endif %}
-        {% endfor %}
-        </div>
+        
         <div class="container col-6 shadow card p-4 my-5">
-               <h1 class="text-center">login</h1>
+               <h1 class="text-center">Forget password</h1>
         <form method="post">
             {% csrf_token %}
                 <div class="mb-3">
@@ -29,15 +21,15 @@
                     
                 </div>
                 <div class="mb-3">
-                    <label  class="form-label">Password</label>
-                    <input type="text"name="password" class="form-control"  aria-describedby="emailHelp">
+                    <label  class="form-label">Email</label>
+                    <input type="text"name="email" class="form-control"  aria-describedby="emailHelp">
                 </div>
+               
                 
                 
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" class="btn btn-success">Verify</button>
         </form>
-        <p class="text-center">Dont Have Account Register <a class="btn btn-primary" href="/register">Register</a></p>
-        <p class="text-center">Forget Password ? <a class="btn btn-primary" href="/forgetPass">Change</a></p>
+        
     </div>
 </body>
 </html>
