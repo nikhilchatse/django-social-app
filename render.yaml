@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: django-social-app
+    env: python
+    buildCommand: pip install -r requirements.txt && python DjangoSocial/manage.py collectstatic --noinput && python DjangoSocial/manage.py migrate
+    startCommand: gunicorn DjangoSocial.DjangoSocial.wsgi:application --bind 0.0.0.0:$PORT
