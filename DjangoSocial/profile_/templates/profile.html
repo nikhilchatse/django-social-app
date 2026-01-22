@@ -40,6 +40,7 @@
                                 <h5 class="card-title">{{request.user.username}}</h5>
                                 <p class="card-text">{{i.captions}}</p>
                                 <p class="card-text">Created At:{{i.created_at}}</p>
+                                <a href={% url "delete" id=i.id %} class="btn btn-primary">Delete</a>
                             </div>
                         </div>
                     </div>

@@ -24,3 +24,4 @@ def create_post(request):
         return redirect("/")
     return render(request,"createpost.html")
 
+

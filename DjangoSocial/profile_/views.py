@@ -42,3 +42,7 @@ def edit_profile(request, id):
 
     return render(request, "edit.html", {'edit': edit_data})
 
+def delete_post(request,id):
+    postdel=posts.objects.filter(id=id)
+    postdel.delete()
+    return redirect("profile")
