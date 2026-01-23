@@ -47,5 +47,8 @@ def edit_profile(request, id):
 @login_required(login_url="login")
 def delete_post(request,id):
     postdel=posts.objects.filter(id=id)
+    if postdel.user != request.user:
+        messages.error(request,"You are not allowed to deleted this post!!!")
+        return redirect("/")
     postdel.delete()
     return redirect("profile")

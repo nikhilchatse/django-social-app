@@ -12,6 +12,18 @@
     <div class="py-5">
         <div class="container">
             <h1 class="text-center text-primary mb-4">Posts</h1>
+
+              <div class="msg-container col-4 ">
+            {% for msg in messages %}
+            {% if msg %}
+                <div class="alert alert-success" role="alert">
+                            {{msg}}
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+
+
             <div class="row row-cols-1 justify-content-center g-4">
                 {% for i in post %}
                 <div class="col-7">

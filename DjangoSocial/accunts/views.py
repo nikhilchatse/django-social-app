@@ -87,5 +87,8 @@ def resetforget(request,id):
                 users.set_password(pass1)
                 users.save()
                 return redirect("login")
+        else:
+            messages.error("ivalid User")
+            return redirect("register")
     
     return render(request,"forgetreset.html")
