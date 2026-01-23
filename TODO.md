@@ -1,3 +1,15 @@
-- [x] Update DjangoSocial/assets/css/dark-theme.css with professional dark theme styles (neutral colors, no gradients, good contrast).
-- [x] Update DjangoSocial/static/css/dark-theme.css with the same professional dark theme styles.
-- [x] Test the changes by running the Django server and checking webpages for professional appearance.
+- [x] Delete DjangoSocial/assets/css/dark-theme.css
+- [x] Delete DjangoSocial/static/css/dark-theme.css
+- [x] Remove dark-theme.css link from DjangoSocial/profile_/templates/index.html
+- [x] Remove data-bs-theme="dark" from DjangoSocial/profile_/templates/index.html
+- [x] Remove dark-theme.css link from DjangoSocial/profile_/templates/profile.html
+- [x] Remove dark-theme.css link from DjangoSocial/profile_/templates/edit.html
+- [x] Remove dark-theme.css link from DjangoSocial/profile_/templates/search.html
+- [x] Remove dark-theme.css link from DjangoSocial/posts/templates/createpost.html
+- [x] Remove dark-theme.css link from DjangoSocial/accunts/templates/login.html
+- [x] Remove dark-theme.css link from DjangoSocial/accunts/templates/register.html
+- [x] Remove dark-theme.css link from DjangoSocial/accunts/templates/resetpass.html
+- [x] Remove dark-theme.css link from DjangoSocial/accunts/templates/forgetPass.html
+- [x] Remove dark-theme.css link from DjangoSocial/accunts/templates/forgetreset.html
+- [x] Update TODO.md to reflect removal
+- [x] Test the Django server to ensure the site works without dark theme
