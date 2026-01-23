@@ -1,9 +1,10 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_list_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .models import Profile
 from django.contrib import messages
 from posts.models import posts
+from django.http import HttpResponseForbidden
 # Create your views here.
 @login_required(login_url="login")
 def user_profile(request):
@@ -46,9 +47,9 @@ def edit_profile(request, id):
 
 @login_required(login_url="login")
 def delete_post(request,id):
-    postdel=posts.objects.filter(id=id)
+    postdel=get_list_or_404(posts,id=id)
     if postdel.user != request.user:
-        messages.error(request,"You are not allowed to deleted this post!!!")
-        return redirect("/")
+        
+        return HttpResponseForbidden("You are not allowed to delete this post")
     postdel.delete()
     return redirect("profile")
