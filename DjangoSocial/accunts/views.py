@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 
@@ -46,6 +47,7 @@ def logout_page(request):
     messages.info(request,"Logout Succeccfull")
     return redirect("login")
 
+@login_required(login_url="login")
 def reset_pass(request):
     if request.method=="POST":
         username=request.POST['username']
@@ -59,6 +61,7 @@ def reset_pass(request):
             messages.success(request,"Password Chanded Successfulyy!!")
             return redirect("login")
     return render(request,"resetpass.html")
+
 
 def forgetPass(request):
     if request.method=='POST':

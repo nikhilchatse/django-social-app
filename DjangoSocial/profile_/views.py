@@ -23,6 +23,7 @@ def home(request):
     #     result=posts.objects.none()
     return render(request,"index.html",{'post':post})
 
+@login_required(login_url="login")
 def edit_profile(request, id):
     edit_data = Profile.objects.get(id=id)
 
@@ -42,6 +43,8 @@ def edit_profile(request, id):
 
     return render(request, "edit.html", {'edit': edit_data})
 
+
+@login_required(login_url="login")
 def delete_post(request,id):
     postdel=posts.objects.filter(id=id)
     postdel.delete()
