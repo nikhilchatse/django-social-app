@@ -1,0 +1,3 @@
+- [x] Update DjangoSocial/assets/css/dark-theme.css with professional dark theme styles (neutral colors, no gradients, good contrast).
+- [x] Update DjangoSocial/static/css/dark-theme.css with the same professional dark theme styles.
+- [x] Test the changes by running the Django server and checking webpages for professional appearance.
