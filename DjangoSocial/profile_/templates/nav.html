@@ -9,6 +9,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">My Profile</a>
+        </li>
       </ul>
 
       <form class="d-flex" role="search">
@@ -16,26 +19,24 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
 
-    </div>
-    <ul class="navbar-nav">
-      {% if user.is_authenticated %}
-      <li class="nav-item">
-          <a class="btn btn-danger m-1" href="/profile">My Profile</a>
+      <ul class="navbar-nav">
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="btn btn-danger m-1" href="/logout">Logout</a>
         </li>
-      <li class="nav-item">
-        <a class="btn btn-danger m-1" href="/logout">Logout</a>
-      </li>
-      {% comment %} <li class="nav-item">
-        <a class="btn btn-primary m-1" href="/resetpass">Reset Password</a>
-      </li> {% endcomment %}
-      {% else %}
-      <li class="nav-item">
-        <a class="btn btn-success" href="/login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/register">Register</a>
-      </li>
-      {% endif %}
+        <li class="nav-item">
+          <a class="btn btn-primary m-1" href="/resetpass">Reset Password</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="btn btn-success" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/register">Register</a>
+        </li>
+        {% endif %}
+
+    </div>
   </div>
 </nav>
 
