@@ -13,7 +13,7 @@
         <div class="container">
             <h1 class="text-center text-primary mb-4">Posts</h1>
 
-              <div class="msg-container col-4 ">
+              <div class="msg-container col-12 col-md-6">
             {% for msg in messages %}
             {% if msg %}
                 <div class="alert alert-success" role="alert">
@@ -26,7 +26,7 @@
 
             <div class="row row-cols-1 justify-content-center g-4">
                 {% for i in post %}
-                <div class="col-7">
+                <div class="col-12 col-md-8 col-lg-6">
                     <div class="card shadow-sm border-0">
                         <img src="{{i.image.url}}" class="card-img-top  rounded-top" alt="..." style="height: 300px;aspect-ratio: 1; object-fit:cover;">
                         <div class="card-body">
