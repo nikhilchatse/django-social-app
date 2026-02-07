@@ -6,6 +6,8 @@ from django.contrib import messages
 from posts.models import posts
 from django.http import HttpResponseForbidden
 # Create your views here.
+
+
 @login_required(login_url="login")
 def user_profile(request):
     profile= request.user.profile
